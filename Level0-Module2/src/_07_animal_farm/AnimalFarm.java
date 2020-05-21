@@ -15,11 +15,30 @@ import javax.swing.JOptionPane;
 public class AnimalFarm {
 	
 	public static void main(String[] args) {
+		Boolean keepPlaying = true;
+		while(keepPlaying == true){
+			String userInput = JOptionPane.showInputDialog("Please enter a number between 1 and 5", null);
 			
-		/* 1. Ask the user which animal they want, then play the sound of that animal. */			 
+			int i = Integer.parseInt(userInput);
+			System.out.println(i);
+			if(i == 1){
+				playMoo();
+			} else if(i == 2) {
+				
+			}
 			
+			
+			String keepPlayingUserInput = JOptionPane.showInputDialog("Would you like to keen playing Y/N",null);
+			if(keepPlayingUserInput.equalsIgnoreCase("yes") || keepPlayingUserInput.equalsIgnoreCase("y")){
+				keepPlaying = true;
+			} else {
+				keepPlaying = false;
+			}
+		}
+		/* 1. Ask the user which animal they want, then play the sound of that animal. */
+		
 		/* 2. Make it so that the user can keep entering new animals. */
-
+			
 	}
 
 	static void playMoo() {
